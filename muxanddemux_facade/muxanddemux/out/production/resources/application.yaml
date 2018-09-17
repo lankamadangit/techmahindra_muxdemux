@@ -1,0 +1,7 @@
+server:
+  port: 8081
+
+services:
+  mux:
+    nametoageserviceuri: http://localhost:8082
+    nametoplaceserviceuri: http://localhost:8083
