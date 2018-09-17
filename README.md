@@ -4,11 +4,13 @@ Scalable Version of MuxDemux is implemented using Reactive Java APIs version 1.0
 https://github.com/ReactiveX/RxJava
 
 Design
-              ----> GetAgeByNameService
-              |
-FacadeService
-              |
-              ----> GetPlaceByNameService
+                               ----> GetAgeByNameService 
+
+                              | 
+
+FacadeService ----------------|
+
+                              | ----> GetPlaceByNameService
               
               
 FacadeService implements service logic to aggregate the data from two services using Observable class APIs like subscribe for invoking the dependent services "GetAgeByNameService" and "GetPlaceByName" services asynchronously & thus avoiding hogging of the threads in the FacadeService.
